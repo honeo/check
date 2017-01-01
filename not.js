@@ -1,7 +1,7 @@
 /*
 	isを元にnot作成
 */
-import is from './is.js';
+const is = require('./is.js');
 
 const not = {}
 
@@ -11,4 +11,4 @@ for(let [key, func] of Object.entries(is) ){
 	}
 }
 
-export default not;
+module.exports = not;

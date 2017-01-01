@@ -1,7 +1,7 @@
 {
-  "name": "@honeo/type-check",
+  "name": "@honeo/check",
   "version": "2.5.0",
-  "description": "型・インスタンスのチェックなど",
+  "description": "型・インスタンスなどの確認",
   "main": "index.js",
   "scripts": {
     "test": "node test/test.js"
@@ -9,11 +9,7 @@
   "author": "honeo",
   "license": "MIT",
   "devDependencies": {
-    "babel-cli": "^6.8.0",
-    "babel-core": "^6.8.0",
-    "babel-preset-latest": "^6.16.0",
-    "babel-preset-stage-0": "^6.5.0",
-    "jsdom": "^8.5.0"
+    "jsdom": "^9.9.1"
   },
   "directories": {
     "test": "test"
@@ -21,16 +17,15 @@
   "dependencies": {},
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/honeo/type-check.git"
+    "url": "git+https://github.com/honeo/check.git"
   },
   "keywords": [
-    "type",
     "check",
-    "typeof",
-    "instanceof"
+    "type",
+    "instance"
   ],
   "bugs": {
-    "url": "https://github.com/honeo/type-check/issues"
+    "url": "https://github.com/honeo/check/issues"
   },
-  "homepage": "https://github.com/honeo/type-check#readme"
+  "homepage": "https://github.com/honeo/check#readme"
 }

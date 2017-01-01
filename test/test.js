@@ -1,10 +1,10 @@
-console.log('type-check: test');
+console.log('check: test');
 
-// babel
-require('babel-polyfill');
-require("babel-register")({
-	presets: ['latest', 'stage-0']
-});
+// // babel
+// require('babel-polyfill');
+// require("babel-register")({
+// 	presets: ['latest', 'stage-0']
+// });
 
-const result = require('./cases.js').default;
-console.log('type-check: test done');
+const result = require('./cases.js');
+console.log('check: test done');

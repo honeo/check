@@ -2,10 +2,10 @@
 	まとめるだけ
 */
 
-import is from './is.js';
-import not from './not.js';
+const is = require('./is.js');
+const not = require('./not.js');
 
-export {
+module.exports = {
 	is,
 	not
 }

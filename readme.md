@@ -1,6 +1,6 @@
-# type-check
-* [honeo/type-check](https://github.com/honeo/type-check)
-* [@honeo/type-check](https://www.npmjs.com/package/@honeo/type-check)
+# check
+* [honeo/check](https://github.com/honeo/check)
+* [@honeo/check](https://www.npmjs.com/package/@honeo/check)
 
 ## なにこれ
 型・インスタンス等をチェックするやつ。  
@@ -8,12 +8,12 @@ Polyfill前提。
 
 ## 使い方
 ```sh
-$ npm i -S @honeo/type-check
+$ npm i -S @honeo/check
 ```
 ```js
-import {is, not} from '@honeo/type-check';
+const {is, not} = require('@honeo/check');
 // or
-import is from '@honeo/type-check/is';
+const is = require('@honeo/check/is');
 
 is.arr([]); // true
 

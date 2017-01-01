@@ -1,39 +1,39 @@
 
 // 型・インスタンス
-import isArray from './lib/is-array.js';
-import isBoolean from './lib/is-boolean.js';
-import isFunction from './lib/is-function.js';
-import isNumber from './lib/is-number.js';
-import isRegExp from './lib/is-reg-exp.js';
-import isString from './lib/is-string.js';
-import isUndefined from './lib/is-undefined.js';
-import isNull from './lib/is-null.js';
-import isNaN from './lib/is-nan.js';
-import isDate from './lib/is-date.js';
-import isEvent from './lib/is-event.js';
-import isEventTarget from './lib/is-event-target.js';
-import isObject from './lib/is-object.js';
-import isPromise from './lib/is-promise.js';
+const isArray = require('./lib/is-array.js');
+const isBoolean = require('./lib/is-boolean.js');
+const isFunction = require('./lib/is-function.js');
+const isNumber = require('./lib/is-number.js');
+const isRegExp = require('./lib/is-reg-exp.js');
+const isString = require('./lib/is-string.js');
+const isUndefined = require('./lib/is-undefined.js');
+const isNull = require('./lib/is-null.js');
+const isNaN = require('./lib/is-nan.js');
+const isDate = require('./lib/is-date.js');
+const isEvent = require('./lib/is-event.js');
+const isEventTarget = require('./lib/is-event-target.js');
+const isObject = require('./lib/is-object.js');
+const isPromise = require('./lib/is-promise.js');
 // 数値の内容判定
-import isOdd from './lib/is-odd.js';
-import isEven from './lib/is-even.js';
-import isMultiple from './lib/is-multiple.js';
+const isOdd = require('./lib/is-odd.js');
+const isEven = require('./lib/is-even.js');
+const isMultiple = require('./lib/is-multiple.js');
 // DOM
-import isNode from './lib/is-node.js';
-import isTextNode from './lib/is-textnode.js';
-import isElement from './lib/is-element.js';
-import isDocumentFragment from './lib/is-document-fragment.js';
+const isNode = require('./lib/is-node.js');
+const isTextNode = require('./lib/is-textnode.js');
+const isElement = require('./lib/is-element.js');
+const isDocumentFragment = require('./lib/is-document-fragment.js');
 // 雑多
-import isTrue from './lib/is-true.js';
-import isFalse from './lib/is-false.js';
-import isTruthy from './lib/is-truthy.js';
-import isFalsy from './lib/is-falsy.js';
-import isObjectLiteral from './lib/is-object-literal.js';
-import isArrayLike from './lib/is-array-like.js';
-import isComparisonOperator from './lib/is-comparison-operator.js';
-import isSemVer from './lib/is-sem-ver.js';
-import isVersion from './lib/is-version.js';
-import isEmpty from './lib/is-empty.js';
+const isTrue = require('./lib/is-true.js');
+const isFalse = require('./lib/is-false.js');
+const isTruthy = require('./lib/is-truthy.js');
+const isFalsy = require('./lib/is-falsy.js');
+const isObjectLiteral = require('./lib/is-object-literal.js');
+const isArrayLike = require('./lib/is-array-like.js');
+const isComparisonOperator = require('./lib/is-comparison-operator.js');
+const isSemVer = require('./lib/is-sem-ver.js');
+const isVersion = require('./lib/is-version.js');
+const isEmpty = require('./lib/is-empty.js');
 
 
 /*
@@ -143,4 +143,4 @@ for(let [key, func] of Object.entries(base)){
 	}
 }
 
-export default is;
+module.exports = is;

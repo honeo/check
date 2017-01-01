@@ -1,6 +1,6 @@
-import {is, not} from '../';
-import _is from '../is';
-import JSDOM from 'jsdom';
+const {is, not} = require('../');
+const _is = require('../is');
+const JSDOM = require('jsdom');
 
 // jsdom set
 global.document = JSDOM.jsdom('hogehoge');
@@ -375,4 +375,4 @@ resultArr.forEach( (bool, index, arr)=>{
 	}
 });
 
-export default true;
+module.exports = true;
