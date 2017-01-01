@@ -1,3 +1,5 @@
+// 設定
+const config = require('./config.js');
 
 // 型・インスタンス
 const isArray = require('./lib/is-array.js');
@@ -35,12 +37,9 @@ const isSemVer = require('./lib/is-sem-ver.js');
 const isVersion = require('./lib/is-version.js');
 const isEmpty = require('./lib/is-empty.js');
 
-
-/*
-	可変長引数に対応するものはbaseに
-	そうでないものはisに登録する
-*/
+// isMethod詰め合わせ
 const base = {}
+// 返り値
 const is = {}
 
 /*
@@ -90,7 +89,7 @@ base.promise = isPromise;
 */
 base.odd = isOdd;
 base.even = isEven;
-is.multiple = isMultiple;
+base.multiple = isMultiple;
 
 /*
 	DOM
@@ -132,15 +131,22 @@ base.empty = isEmpty;
 /*
 	is
 		baseを可変長引数化
+			config.variadic.ignoreの内容は無視する
 		引数があれば判定関数を渡してevery
 		なければfalseを返す
 */
 for(let [key, func] of Object.entries(base)){
-	is[key] = (...args)=>{
-		return args.length ?
-			args.every(func):
-			false;
+	const isVariadic = !config.variadic.ignore.includes(key);
+	if( isVariadic ){
+		is[key] = (...args)=>{
+			return args.length ?
+				args.every(func):
+				false;
+		}
+	}else{
+		is[key] = func;
 	}
+
 }
 
 module.exports = is;
