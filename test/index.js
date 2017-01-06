@@ -18,9 +18,9 @@ const cases = {}
 
 // array, arr
 cases.array = (arg)=>{
-	return !is.array()
+	return !is.Array()
 		&& is.array([])
-		&& is.arr([])
+		&& is.Arr([])
 		&& is.arr([], [])
 		&& !is.arr('array!')
 		&& !is.arr([], true);
@@ -28,9 +28,9 @@ cases.array = (arg)=>{
 
 // boolean, bool
 cases.boolean = (arg)=>{
-	return !is.boolean()
+	return !is.Boolean()
 		&& is.boolean(true)
-		&& is.bool(false)
+		&& is.Bool(false)
 		&& is.bool(true, false)
 		&& !is.bool('boolean!')
 		&& !is.bool(true, 'true');
@@ -39,9 +39,9 @@ cases.boolean = (arg)=>{
 // function, func
 cases.function = (arg)=>{
 	const f = function(){};
-	return !is.function()
+	return !is.Function()
 		&& is.function(f)
-		&& is.func(f)
+		&& is.Func(f)
 		&& is.func(f, f)
 		&& !is.func('function!')
 		&& !is.func(f, true);
@@ -49,9 +49,9 @@ cases.function = (arg)=>{
 
 // number, num
 cases.number = (arg)=>{
-	return !is.number()
+	return !is.Number()
 		&& is.number(123)
-		&& is.num(45)
+		&& is.Num(45)
 		&& is.num(22, 80, 443)
 		&& !is.num('number!')
 		&& !is.num(1, true);
@@ -60,9 +60,9 @@ cases.number = (arg)=>{
 // regexp, re
 cases.regexp = (arg)=>{
 	const r = /hoge/;
-	return !is.regexp()
+	return !is.RegExp()
 		&& is.regexp(r)
-		&& is.re(r)
+		&& is.RE(r)
 		&& is.re(r, r)
 		&& !is.re('rexexp!')
 		&& !is.re(r, true);
@@ -70,9 +70,9 @@ cases.regexp = (arg)=>{
 
 // string, str
 cases.string = (arg)=>{
-	return !is.string()
+	return !is.String()
 		&& is.string('hoge')
-		&& is.str('fuga')
+		&& is.Str('fuga')
 		&& is.str('foo', 'bar')
 		&& !is.str(123)
 		&& !is.str('piyo', true);
@@ -80,7 +80,7 @@ cases.string = (arg)=>{
 
 // undefined
 cases.undefined = (arg)=>{
-	return !is.undefined()
+	return !is.Undefined()
 		&& is.undefined(undefined)
 		&& is.undefined(undefined, undefined)
 		&& !is.undefined(null);
@@ -88,7 +88,7 @@ cases.undefined = (arg)=>{
 
 // null
 cases.null = (arg)=>{
-	return !is.null()
+	return !is.Null()
 		&& is.null(null)
 		&& is.null(null, null)
 		&& !is.null(undefined);
@@ -96,7 +96,7 @@ cases.null = (arg)=>{
 
 // NaN
 cases.nan = (arg)=>{
-	return !is.nan()
+	return !is.NaN()
 		&& is.nan(NaN)
 		&& is.nan(NaN, NaN)
 		&& !is.nan(undefined);
@@ -108,7 +108,7 @@ cases.nan = (arg)=>{
 
 // date
 cases.date = (arg)=>{
-	return !is.date()
+	return !is.Date()
 		&& !is.date({})
 		&& !is.date('date object')
 		&& is.date(new Date());
@@ -116,7 +116,7 @@ cases.date = (arg)=>{
 
 // event
 cases.event = (arg)=>{
-	return !is.event()
+	return !is.Event()
 		&& !is.event({})
 		&& !is.event('event')
 		&& is.event( new Event('hoge') );
@@ -135,9 +135,9 @@ cases.event = (arg)=>{
 
 // object, obj
 cases.object = (arg)=>{
-	return !is.object()
+	return !is.Object()
 		&& is.object({})
-		&& is.obj({})
+		&& is.Obj({})
 		&& is.obj({}, {})
 		&& !is.obj('object!')
 		&& !is.obj({}, true);
@@ -146,7 +146,7 @@ cases.object = (arg)=>{
 // promise
 cases.orinuse = (arg)=>{
 	const p = new Promise(_=>_);
-	return !is.promise()
+	return !is.Promise()
 		&& is.promise(p)
 		&& is.promise(p, p)
 		&& !is.promise('promise!')
@@ -161,7 +161,7 @@ cases.orinuse = (arg)=>{
 
 // odd
 cases.odd = (arg)=>{
-	return is.odd(0)
+	return is.Odd(0)
 		&& is.odd(2)
 		&& is.odd(4, 6)
 		&& !is.odd(8, 9)
@@ -170,7 +170,7 @@ cases.odd = (arg)=>{
 
 // even
 cases.even = (arg)=>{
-	return is.even(1)
+	return is.Even(1)
 		&& is.even(3)
 		&& is.even(5, 7)
 		&& !is.even(9, 10)
@@ -179,7 +179,7 @@ cases.even = (arg)=>{
 
 // multiple
 cases.multiple = (arg)=>{
-	return is.multiple(4, 2)
+	return is.Multiple(4, 2)
 		&& is.multiple(8080, 80)
 		&& !is.multiple(151, 50)
 		&& !is.multiple('multiple!');
@@ -193,7 +193,7 @@ const element = document.createElement('div');
 
 // node
 cases.node = (arg)=>{
-	return !is.node()
+	return !is.Node()
 		&& is.node(textnode)
 		&& is.node(element)
 		&& is.node(textnode, element)
@@ -203,7 +203,7 @@ cases.node = (arg)=>{
 
 // textnode
 cases.textnode = (arg)=>{
-	return !is.textnode()
+	return !is.TextNode()
 		&& is.textnode(textnode)
 		&& is.textnode(textnode, textnode)
 		&& !is.textnode('textnode!')
@@ -212,19 +212,19 @@ cases.textnode = (arg)=>{
 
 // element
 cases.element = (arg)=>{
-	return !is.element()
-		&& is.element(element)
+	return !is.Element()
+		&& is.Elm(element)
 		&& is.element(element, element)
-		&& !is.element('element!')
+		&& !is.elm('element!')
 		&& !is.element(element, true);
 }
 
 // documentfragment, df
 cases.documentfragment = (arg)=>{
 	const df = document.createDocumentFragment();
-	return !is.documentfragment()
+	return !is.DocumentFragment()
 		&& is.documentfragment(df)
-		&& is.df(df)
+		&& is.DF(df)
 		&& is.df(df, df)
 		&& !is.df('documentfragment!')
 		&& !is.df(df, true);
@@ -238,7 +238,7 @@ cases.documentfragment = (arg)=>{
 
 // true
 cases.true = (arg)=>{
-	return !is.true()
+	return !is.True()
 		&& is.true(true)
 		&& is.true(true, true)
 		&& !is.true('true!')
@@ -247,7 +247,7 @@ cases.true = (arg)=>{
 
 // false
 cases.false = (arg)=>{
-	return !is.false()
+	return !is.False()
 		&& is.false(false)
 		&& is.false(false, false)
 		&& !is.false('false!')
@@ -256,7 +256,7 @@ cases.false = (arg)=>{
 
 // truthy
 cases.truthy = (arg)=>{
-	return !is.truthy()
+	return !is.Truthy()
 		&& is.truthy(true)
 		&& is.truthy("hoge", 123, [], {})
 		&& !is.truthy(null, undefined)
@@ -265,7 +265,7 @@ cases.truthy = (arg)=>{
 
 // falsy
 cases.falsy = (arg)=>{
-	return !is.falsy()
+	return !is.Falsy()
 		&& is.falsy(false)
 		&& is.falsy("", 0, null, undefined, NaN)
 		&& !is.falsy(true, "hoge", 123)
@@ -274,7 +274,7 @@ cases.falsy = (arg)=>{
 
 // objectliteral
 cases.objectliteral = (arg)=>{
-	return !is.objectliteral()
+	return !is.ObjectLiteral()
 		&& is.objectliteral({})
 		&& is.objectliteral({}, new Object({}))
 		&& !is.objectliteral( new function(){} )
@@ -283,7 +283,7 @@ cases.objectliteral = (arg)=>{
 
 // arraylike
 cases.arraylike = (arg)=>{
-	return !is.arraylike()
+	return !is.ArrayLike()
 		&& is.arraylike([])
 		&& is.arraylike('hoge', {length: 0})
 		&& !is.arraylike(12345)
@@ -292,7 +292,7 @@ cases.arraylike = (arg)=>{
 
 // isComparisonOperator
 cases.comparisonoperator = (arg)=>{
-	return !is.comparisonoperator()
+	return !is.ComparisonOperator()
 		&& is.comparisonoperator('<')
 		&& is.comparisonoperator('!==')
 		&& !is.comparisonoperator('&&')
@@ -301,7 +301,7 @@ cases.comparisonoperator = (arg)=>{
 
 // isSemVer
 cases.semver = (arg)=>{
-	return !is.semver()
+	return !is.SemVer()
 		&& is.semver('1.2.3')
 		&& is.semver('1.0.0-foo.bar', '2.2.2')
 		&& !is.semver('1.2.3.4')
@@ -311,17 +311,17 @@ cases.semver = (arg)=>{
 
 // isVersion
 cases.version = (arg)=>{
-	return !is.version()
-		&& is.version('1.2.3')
+	return !is.Version()
+		&& is.Ver('1.2.3')
 		&& is.version('1.0.0.0', '7.7.7.7.7.7.7')
-		&& !is.version('1.2.3.4.')
+		&& !is.ver('1.2.3.4.')
 		&& !is.version(1.0)
 		&& !is.version(true, '1.0.0A')
 }
 
 // isEmpty
 cases.empty = (arg)=>{
-	return is.empty({})
+	return is.Empty({})
 		&& is.empty([])
 		&& is.empty('')
 		&& !is.empty()
@@ -347,22 +347,22 @@ for(let [key, method] of Object.entries(cases)){
 */
 const resultArr = [
 	// string
-	not.string(),
+	not.String(),
 	!not.string('hoge'),
-	!not.str('fuga'),
+	!not.Str('fuga'),
 	!not.str('foo', 'bar'),
 	not.str(123),
 	not.str(true, false),
 	not.str('piyo', true),
 
 	// multiple
-	not.multiple(5, 2),
+	not.Multiple(5, 2),
 	not.multiple(7777, 80),
 	!not.multiple(150, 50),
 	not.multiple('multiple!'),
 
 	// element
-	not.element(true),
+	not.Element(true),
 	!not.element(element),
 
 	// 読み込みチェック
@@ -384,6 +384,10 @@ resultArr.forEach( (bool, index, arr)=>{
 */
 const resultArr_any = [
 	any.true(false, true),
+	any.True(false, true),
+	!any.Number('123', true),
+	!any.number('123', true),
+	!any.Num('123', true),
 	!any.num('123', true)
 ];
 

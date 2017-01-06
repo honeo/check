@@ -16,7 +16,9 @@ const config = {
 		isRegExp: 'isRE',
 		isString: 'isStr',
 		isObject: 'isObj',
-		isDocumentFragment: 'isDF'
+		isElement: 'isElm',
+		isDocumentFragment: 'isDF',
+		isVersion: 'isVer'
 	}
 }
 

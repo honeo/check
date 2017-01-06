@@ -29,7 +29,7 @@ const _is = {
 
 	// DOM
 	isNode: require('./is-node.js'),
-	isTextNode: require('./is-textnode.js'),
+	isTextNode: require('./is-text-node.js'),
 	isElement: require('./is-element.js'),
 	isDocumentFragment: require('./is-document-fragment.js'),
 
