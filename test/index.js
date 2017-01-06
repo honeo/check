@@ -1,6 +1,6 @@
 console.log('check: test');
 
-const {is, not} = require('../');
+const {is, not, any} = require('../');
 const _is = require('../is');
 const JSDOM = require('jsdom');
 
@@ -369,11 +369,29 @@ const resultArr = [
 	(is===_is)
 ];
 
+
 resultArr.forEach( (bool, index, arr)=>{
 	if( bool ){
 		console.log(`not: ${index+1}/${arr.length} success`);
 	}else{
 		throw new Error(`not: ${index}/${arr.length} failed`);
+	}
+});
+
+
+/*
+	any
+*/
+const resultArr_any = [
+	any.true(false, true),
+	!any.num('123', true)
+];
+
+resultArr_any.forEach( (bool, index, arr)=>{
+	if( bool ){
+		console.log(`any: ${index+1}/${arr.length} success`);
+	}else{
+		throw new Error(`any: ${index}/${arr.length} failed`);
 	}
 });
 
