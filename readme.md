@@ -18,7 +18,7 @@ const is = require('@honeo/check/is');
 is.arr([]); // true
 
 is.arr([], {}); // false
-not.arr([], {}); // true
+not.arr([], {}); // false
 any.arr([], {}); // true
 ```
 
