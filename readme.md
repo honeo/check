@@ -11,19 +11,19 @@ Polyfill前提。
 $ npm i -S @honeo/check
 ```
 ```js
-const {is, not} = require('@honeo/check');
+const {is, not, any} = require('@honeo/check');
 // or
 const is = require('@honeo/check/is');
 
 is.arr([]); // true
 
-not.num('hoge'); // false
-
-is.obj({}, null); // false
+is.arr([], {}); // false
+not.arr([], {}); // true
+any.arr([], {}); // true
 ```
 
 ## API
-is, not共用。
+is, not, any共用。
 
 ### Type
 
