@@ -9,6 +9,7 @@ const _is = {
 	// 型・インスタンス
 	isArray: require('./is-array.js'),
 	isBoolean: require('./is-boolean.js'),
+	isBuffer: require('./is-buffer.js'),
 	isFunction: require('./is-function.js'),
 	isNumber: require('./is-number.js'),
 	isRegExp: require('./is-reg-exp.js'),

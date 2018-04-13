@@ -36,6 +36,8 @@ cases.boolean = (arg)=>{
 		&& !is.bool(true, 'true');
 }
 
+
+
 // function, func
 cases.function = (arg)=>{
 	const f = function(){};
@@ -105,6 +107,21 @@ cases.nan = (arg)=>{
 
 
 /// instance
+
+
+// buffer
+cases.buffer = ()=>{
+	const buffer = new Buffer('hoge');
+	return is.Buffer(buffer)
+		&& is.Buf(buffer)
+		&& is.buffer(buffer)
+		&& is.buf(buffer)
+		&& !is.Buffer('hoge')
+		&& !is.Buffer()
+		&& !is.Buffer(true)
+		&& !is.Buffer({});
+}
+
 
 // date
 cases.date = (arg)=>{
