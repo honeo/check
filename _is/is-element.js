@@ -1,10 +1,10 @@
 /*
 	comment
 */
-const isNode = require('./is-node.js');
+const isObject = require('./is-object.js');
 
 function isElement(arg){
-	return isNode(arg) && arg.nodeType===1;
+	return isObject(arg) && arg instanceof Element;
 }
 
 module.exports = isElement;

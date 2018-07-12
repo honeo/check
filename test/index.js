@@ -9,6 +9,7 @@ global.document = JSDOM.jsdom('hogehoge');
 global.head = document.head;
 global.window = document.defaultView;
 global.Node = window.Node;
+global.Element = window.Element;
 global.Event = window.Event;
 
 // Cases
