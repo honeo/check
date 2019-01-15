@@ -2,4 +2,8 @@
 	comment
 */
 
-module.exports = ;
+function isHoge(arg){
+	return arg;
+}
+
+module.exports = isHoge;

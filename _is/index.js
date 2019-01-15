@@ -10,6 +10,7 @@ const _is = {
 	isArray: require('./is-array.js'),
 	isBoolean: require('./is-boolean.js'),
 	isBuffer: require('./is-buffer.js'),
+	isError: require('./is-error.js'),
 	isFunction: require('./is-function.js'),
 	isNumber: require('./is-number.js'),
 	isRegExp: require('./is-reg-exp.js'),

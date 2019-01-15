@@ -37,7 +37,15 @@ cases.boolean = (arg)=>{
 		&& !is.bool(true, 'true');
 }
 
-
+// error, err
+cases.error = (arg)=>{
+	return !is.Error()
+		&& is.error(new Error())
+		&& is.Err(new Error())
+		&& is.err(new Error(), new Error())
+		&& !is.err('error')
+		&& !is.err(new Error(), 'error');
+}
 
 // function, func
 cases.function = (arg)=>{

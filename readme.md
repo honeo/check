@@ -42,6 +42,8 @@ is.bool(true, false); // true
 
 is.buffer(new Buffer('foobar')); // true
 
+is.error(new Error('hoge')); // true
+
 is.function(function(){}); // true
 is.func(_=>_, _=>_); // true
 
@@ -74,6 +76,7 @@ is.promise(new Promise(_=>_)); // true
 | Array, Arr, array, arr             |             |    ○    |
 | Boolean, Bool, boolean, bool       |             |    ○    |
 | Buffer, Buf, buffer, buf           |             |    ○    |
+| Error, Err, error, err             |             |    ○    |
 | Function, Func, function, func     |             |    ○    |
 | Number, Num, number, num           |             |    ○    |
 | RegExp, RE, regexp, re             |             |    ○    |
