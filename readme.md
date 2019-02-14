@@ -45,7 +45,8 @@ is.buffer(new Buffer('foobar')); // true
 is.error(new Error('hoge')); // true
 
 is.function(function(){}); // true
-is.func(_=>_, _=>_); // true
+is.func(()=>{}); // true
+is.fn(_=>_); // true
 
 is.number(1); // true
 is.num(0, 1); // true
@@ -73,23 +74,23 @@ is.promise(new Promise(_=>_)); // true
 is.stats( fs.statSync('./') ); // true
 ```
 
-| name                               | description | varargs |
-|:---------------------------------- |:----------- |:-------:|
-| Array, Arr, array, arr             |             |    ○    |
-| Boolean, Bool, boolean, bool       |             |    ○    |
-| Buffer, Buf, buffer, buf           |             |    ○    |
-| Error, Err, error, err             |             |    ○    |
-| Function, Func, function, func     |             |    ○    |
-| Number, Num, number, num           |             |    ○    |
-| RegExp, RE, regexp, re             |             |    ○    |
-| String, Str, string, str           |             |    ○    |
-| Undefined, Undef, undefined, undef |             |    ○    |
-| Null, null                         |             |    ○    |
-| NaN, nan                           |             |    ○    |
-| Date, date                         |             |    ○    |
-| Object, Obj, object, obj           |             |    ○    |
-| Promise, promise                   |             |    ○    |
-| Stats, stats                       |             |    ○    |
+| name                                   | description | varargs |
+|:-------------------------------------- |:----------- |:-------:|
+| Array, Arr, array, arr                 |             |    ○    |
+| Boolean, Bool, boolean, bool           |             |    ○    |
+| Buffer, Buf, buffer, buf               |             |    ○    |
+| Error, Err, error, err                 |             |    ○    |
+| Function, Func, Fn, function, func, fn |             |    ○    |
+| Number, Num, number, num               |             |    ○    |
+| RegExp, RE, regexp, re                 |             |    ○    |
+| String, Str, string, str               |             |    ○    |
+| Undefined, Undef, undefined, undef     |             |    ○    |
+| Null, null                             |             |    ○    |
+| NaN, nan                               |             |    ○    |
+| Date, date                             |             |    ○    |
+| Object, Obj, object, obj               |             |    ○    |
+| Promise, promise                       |             |    ○    |
+| Stats, stats                           |             |    ○    |
 
 
 

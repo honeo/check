@@ -47,13 +47,14 @@ cases.error = (arg)=>{
 		&& !is.err(new Error(), 'error');
 }
 
-// function, func
+// function, func, fn
 cases.function = (arg)=>{
 	const f = function(){};
 	return !is.Function()
 		&& is.function(f)
 		&& is.Func(f)
 		&& is.func(f, f)
+		&& is.fn(f)
 		&& !is.func('function!')
 		&& !is.func(f, true);
 }
@@ -120,7 +121,7 @@ cases.nan = (arg)=>{
 
 // buffer
 cases.buffer = ()=>{
-	const buffer = new Buffer('hoge');
+	const buffer = Buffer.from('hoge');
 	return is.Buffer(buffer)
 		&& is.Buf(buffer)
 		&& is.buffer(buffer)

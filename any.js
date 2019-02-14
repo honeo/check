@@ -30,11 +30,16 @@ for(let [key, func] of Object.entries(_is)){
 	const name2 = name1.toLowerCase();
 	nameArr.push(name1, name2);
 	// 略称版があれば作る
-	const name_short = config.short[key];
-	if( name_short ){
-		const name_short1 = name_short.slice(2);
-		const name_short2 = name_short1.toLowerCase();
-		nameArr.push(name_short1, name_short2);
+	if( config.short[key] ){
+		const arr_alias = Array.isArray(config.short[key]) ?
+			config.short[key]:
+			[config.short[key]];
+		arr_alias.forEach( (name)=>{
+			console.log('methodName:', name);
+			const str_Camel = name.slice(2); // "is"をカット
+			const str_lower = str_Camel.toLowerCase(); // "Method" => "method"
+			nameArr.push(str_Camel, str_lower);
+		});
 	}
 
 	// 可変長引数化
