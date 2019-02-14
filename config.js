@@ -5,7 +5,10 @@ const config = {
 
 	// 可変長引数に関する設定
 	variadic: {
-		ignore: ['isMultiple'] // 無視する関数名
+		ignore: [// 無視する関数名
+			'isInstance',
+			'isMultiple'
+		]
 	},
 
 	// 別名付けるやつ
@@ -13,7 +16,7 @@ const config = {
 		isArray: 'isArr',
 		isBoolean: 'isBool',
 		isBuffer: 'isBuf',
-		isError: 'isErr', 
+		isError: 'isErr',
 		isFunction: 'isFunc',
 		isNumber: 'isNum',
 		isRegExp: 'isRE',

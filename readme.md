@@ -9,7 +9,7 @@ Polyfill前提。
 
 
 ## 使い方
-```sh
+```bash
 $ npm i @honeo/check
 ```
 ```js
@@ -149,6 +149,8 @@ is.truthy(true, "hoge", 1, [], {}); // true
 
 is.falsy(null, undefined, "", 0, NaN); // true
 
+is.instance(new Date(), Date); //true
+
 is.objectliteral({}); // true
 not.objectliteral([], new function(){}); // true
 
@@ -166,15 +168,16 @@ is.empty('', [], {}) // true
 is.empty(0, null); // false
 ```
 
-| name                                       | description                           | varargs |
-|:------------------------------------------ |:------------------------------------- |:-------:|
-| True(), true()                             |                                       |    ○    |
-| False(), false()                           |                                       |    ○    |
-| Truthy(), truthy()                         |                                       |    ○    |
-| Falsy(), falsy()                           |                                       |    ○    |
-| ObjectLiteral(), objectliteral()           | 未継承の素のオブジェクトか。          |    ○    |
-| ArrayLike(), arraylike()                   |                                       |    ○    |
-| ComparisonOperator(), comparisonoperator() | 有効な比較演算子の文字列か。          |    ○    |
-| SemVer(), semver()                         | 有効なSemVer文字列か。                |    ○    |
-| Version(), Ver(), versiom(), ver()         | 有効な数字, dotのバージョン文字列か。 |    ○    |
-| Empty(), empty()                           | 要素が空か。                          |    ○    |
+| name                                       | description                                       | varargs |
+|:------------------------------------------ |:------------------------------------------------- |:-------:|
+| ArrayLike(), arraylike()                   |                                                   |    ○    |
+| True(), true()                             |                                                   |    ○    |
+| False(), false()                           |                                                   |    ○    |
+| Truthy(), truthy()                         |                                                   |    ○    |
+| Falsy(), falsy()                           |                                                   |    ○    |
+| Empty(), empty()                           | 要素が空か。                                      |    ○    |
+| Instance(), instance                       | 引数1が引数2のConstructor/Classのインスタンスか。 |    ✗    |
+| ObjectLiteral(), objectliteral()           | 未継承の素のオブジェクトか。                      |    ○    |
+| ComparisonOperator(), comparisonoperator() | 有効な比較演算子の文字列か。                      |    ○    |
+| SemVer(), semver()                         | 有効なSemVer文字列か。                            |    ○    |
+| Version(), Ver(), versiom(), ver()         | 有効な数字, dotのバージョン文字列か。             |    ○    |

@@ -309,6 +309,15 @@ cases.falsy = (arg)=>{
 		&& !is.falsy(true, false);
 }
 
+
+// instance
+cases.instance = (arg)=>{
+	return !is.instance()
+		&& is.instance(new Date, Date)
+		&& !is.instance({}, Array)
+		&& !is.instance(true, false);
+}
+
 // objectliteral
 cases.objectliteral = (arg)=>{
 	return !is.ObjectLiteral()

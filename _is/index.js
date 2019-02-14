@@ -41,6 +41,7 @@ const _is = {
 	isFalse: require('./is-false.js'),
 	isTruthy: require('./is-truthy.js'),
 	isFalsy: require('./is-falsy.js'),
+	isInstance: require('./is-instance.js'),
 	isObjectLiteral: require('./is-object-literal.js'),
 	isArrayLike: require('./is-array-like.js'),
 	isComparisonOperator: require('./is-comparison-operator.js'),
