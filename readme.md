@@ -69,6 +69,8 @@ is.object({}); // true
 is.obj(null); // false
 
 is.promise(new Promise(_=>_)); // true
+
+is.stats( fs.statSync('./') ); // true
 ```
 
 | name                               | description | varargs |
@@ -87,7 +89,7 @@ is.promise(new Promise(_=>_)); // true
 | Date, date                         |             |    ○    |
 | Object, Obj, object, obj           |             |    ○    |
 | Promise, promise                   |             |    ○    |
-
+| Stats, stats                       |             |    ○    |
 
 
 
