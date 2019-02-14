@@ -14,6 +14,7 @@ const _is = {
 	isFunction: require('./is-function.js'),
 	isNumber: require('./is-number.js'),
 	isRegExp: require('./is-reg-exp.js'),
+	isStats: require('./is-stats.js'),
 	isString: require('./is-string.js'),
 	isUndefined: require('./is-undefined.js'),
 	isNull: require('./is-null.js'),

@@ -169,8 +169,19 @@ cases.object = (arg)=>{
 		&& !is.obj({}, true);
 }
 
+// stats
+cases.stats = (arg)=>{
+	const fs = require('fs');
+	const stats_dir = fs.statSync('./');
+	const stats_file = fs.statSync(__filename);
+	return !is.stats()
+		&& is.stats(stats_dir)
+		&& is.stats(stats_dir, stats_file)
+		&& !is.stats({}, true);
+}
+
 // promise
-cases.orinuse = (arg)=>{
+cases.promise = (arg)=>{
 	const p = new Promise(_=>_);
 	return !is.Promise()
 		&& is.promise(p)
