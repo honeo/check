@@ -35,7 +35,7 @@ for(let [key, func] of Object.entries(_is)){
 			config.short[key]:
 			[config.short[key]];
 		arr_alias.forEach( (name)=>{
-			console.log('methodName:', name);
+			// console.log('methodName:', name);
 			const str_Camel = name.slice(2); // "is"をカット
 			const str_lower = str_Camel.toLowerCase(); // "Method" => "method"
 			nameArr.push(str_Camel, str_lower);
