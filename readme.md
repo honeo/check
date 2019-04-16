@@ -167,6 +167,8 @@ is.version('1.2A', 1.0); // false
 
 is.empty('', [], {}) // true
 is.empty(0, null); // false
+
+is.leapyear(2020, new Date('2024'));
 ```
 
 | name                                       | description                                       | varargs |
@@ -182,3 +184,4 @@ is.empty(0, null); // false
 | ComparisonOperator(), comparisonoperator() | 有効な比較演算子の文字列か。                      |    ○    |
 | SemVer(), semver()                         | 有効なSemVer文字列か。                            |    ○    |
 | Version(), Ver(), versiom(), ver()         | 有効な数字, dotのバージョン文字列か。             |    ○    |
+| LeapYear(), leapyear()                     | 閏年か。                                          |    ○    |

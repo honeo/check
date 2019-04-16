@@ -378,6 +378,14 @@ cases.empty = (arg)=>{
 		&& !is.empty('0');
 }
 
+// isLeapYear
+cases.leapyear = (arg)=>{
+	return is.LeapYear(2020)
+		&& is.leapyear(new Date('2016'))
+		&& !is.leapyear(2019)
+		&& !is.leapyear(new Date('2018'));
+}
+
 // 本体
 for(let [key, method] of Object.entries(cases)){
 	if( method() ){
