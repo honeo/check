@@ -48,7 +48,8 @@ const _is = {
 	isSemVer: require('./is-sem-ver.js'),
 	isVersion: require('./is-version.js'),
 	isEmpty: require('./is-empty.js'),
-	isLeapYear: require('./is-leap-year.js')
+	isLeapYear: require('./is-leap-year.js'),
+	isValidDate: require('./is-valid-date.js')
 }
 
 module.exports = _is;

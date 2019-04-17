@@ -386,6 +386,14 @@ cases.leapyear = (arg)=>{
 		&& !is.leapyear(new Date('2018'));
 }
 
+// isValidDate
+cases.isvaliddate = (arg)=>{
+	return is.ValidDate(2020, 11, 11)
+		&& is.validdate(2019, 4, 17)
+		&& !is.validdate(1995, 13, 1)
+		&& !is.validdate(2010, 4, 32);
+}
+
 // 本体
 for(let [key, method] of Object.entries(cases)){
 	if( method() ){

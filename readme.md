@@ -169,6 +169,9 @@ is.empty('', [], {}) // true
 is.empty(0, null); // false
 
 is.leapyear(2020, new Date('2024'));
+
+is.validdate(2019, 4, 17); // true
+is.validdate(2020, 12, 32); // false
 ```
 
 | name                                       | description                                       | varargs |
@@ -185,3 +188,4 @@ is.leapyear(2020, new Date('2024'));
 | SemVer(), semver()                         | 有効なSemVer文字列か。                            |    ○    |
 | Version(), Ver(), versiom(), ver()         | 有効な数字, dotのバージョン文字列か。             |    ○    |
 | LeapYear(), leapyear()                     | 閏年か。                                          |    ○    |
+| ValidDate(), validdate()                   | 存在する日時か。                                  |    ✗    | 

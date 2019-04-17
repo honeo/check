@@ -7,7 +7,8 @@ const config = {
 	variadic: {
 		ignore: [// 無視する関数名
 			'isInstance',
-			'isMultiple'
+			'isMultiple',
+			'isValidDate'
 		]
 	},
 
