@@ -27,6 +27,8 @@ any.arr([], {}); // true
 
 ## API
 is, not, any共用。
+
+### Alias
 ```js
 is.FooBar===is.foobar; // true
 ```
@@ -74,23 +76,23 @@ is.promise(new Promise(_=>_)); // true
 is.stats( fs.statSync('./') ); // true
 ```
 
-| name                                   | description | varargs |
-|:-------------------------------------- |:----------- |:-------:|
-| Array, Arr, array, arr                 |             |    ○    |
-| Boolean, Bool, boolean, bool           |             |    ○    |
-| Buffer, Buf, buffer, buf               |             |    ○    |
-| Error, Err, error, err                 |             |    ○    |
-| Function, Func, Fn, function, func, fn |             |    ○    |
-| Number, Num, number, num               |             |    ○    |
-| RegExp, RE, regexp, re                 |             |    ○    |
-| String, Str, string, str               |             |    ○    |
-| Undefined, Undef, undefined, undef     |             |    ○    |
-| Null, null                             |             |    ○    |
-| NaN, nan                               |             |    ○    |
-| Date, date                             |             |    ○    |
-| Object, Obj, object, obj               |             |    ○    |
-| Promise, promise                       |             |    ○    |
-| Stats, stats                           |             |    ○    |
+| name                                   | type | varargs | description |
+|:-------------------------------------- |:---- |:-------:|:----------- |
+| Array, Arr, array, arr                 | any  |    ○    |             |
+| Boolean, Bool, boolean, bool           | any  |    ○    |             |
+| Buffer, Buf, buffer, buf               | any  |    ○    |             |
+| Error, Err, error, err                 | any  |    ○    |             |
+| Function, Func, Fn, function, func, fn | any  |    ○    |             |
+| Number, Num, number, num               | any  |    ○    |             |
+| RegExp, RE, regexp, re                 | any  |    ○    |             |
+| String, Str, string, str               | any  |    ○    |             |
+| Undefined, Undef, undefined, undef     | any  |    ○    |             |
+| Null, null                             | any  |    ○    |             |
+| NaN, nan                               | any  |    ○    |             |
+| Date, date                             | any  |    ○    |             |
+| Object, Obj, object, obj               | any  |    ○    |             |
+| Promise, promise                       | any  |    ○    |             |
+| Stats, stats                           | any  |    ○    |             |
 
 
 
@@ -104,11 +106,11 @@ is.even(3); // true
 is.multiple(8080, 80); // true
 ```
 
-| name               | description            | varargs |
-|:------------------ |:---------------------- |:-------:|
-| Odd, odd           |                        |    ○    |
-| Even, even         |                        |    ○    |
-| Multiple, multiple | 引数1が引数2の倍数か。 |    ✗    |
+| name               | type | varargs | description            |
+|:------------------ |:---- |:-------:|:---------------------- |
+| Odd, odd           | any  |    ○    |                        |
+| Even, even         | any  |    ○    |                        |
+| Multiple, multiple | any  |    ✗    | 引数1が引数2の倍数か。 |
 
 
 
@@ -129,14 +131,14 @@ is.event( new Event("hoge") ); // true
 is.eventtarget(document, window); // true
 ```
 
-| name                                       | description | varargs |
-|:------------------------------------------ |:----------- |:-------:|
-| Node, node                                 |             |    ○    |
-| TextNode, textnode                         |             |    ○    |
-| Element, Elm, element, elm                 |             |    ○    |
-| DocumentFragment, DF, documentfragment, df |             |    ○    |
-| Event, event                               |             |    ○    |
-| EventTarget, eventtarget                   |             |    ○    |
+| name                                       | type | varargs | description |
+|:------------------------------------------ |:---- |:-------:|:----------- |
+| Node, node                                 | any  |    ○    |             |
+| TextNode, textnode                         | any  |    ○    |             |
+| Element, Elm, element, elm                 | any  |    ○    |             |
+| DocumentFragment, DF, documentfragment, df | any  |    ○    |             |
+| Event, event                               | any  |    ○    |             |
+| EventTarget, eventtarget                   | any  |    ○    |             |
 
 
 ### その他
@@ -174,18 +176,18 @@ is.validdate(2019, 4, 17); // true
 is.validdate(2020, 12, 32); // false
 ```
 
-| name                                       | description                                       | varargs |
-|:------------------------------------------ |:------------------------------------------------- |:-------:|
-| ArrayLike(), arraylike()                   |                                                   |    ○    |
-| True(), true()                             |                                                   |    ○    |
-| False(), false()                           |                                                   |    ○    |
-| Truthy(), truthy()                         |                                                   |    ○    |
-| Falsy(), falsy()                           |                                                   |    ○    |
-| Empty(), empty()                           | 要素が空か。                                      |    ○    |
-| Instance(), instance                       | 引数1が引数2のConstructor/Classのインスタンスか。 |    ✗    |
-| ObjectLiteral(), objectliteral()           | 未継承の素のオブジェクトか。                      |    ○    |
-| ComparisonOperator(), comparisonoperator() | 有効な比較演算子の文字列か。                      |    ○    |
-| SemVer(), semver()                         | 有効なSemVer文字列か。                            |    ○    |
-| Version(), Ver(), versiom(), ver()         | 有効な数字, dotのバージョン文字列か。             |    ○    |
-| LeapYear(), leapyear()                     | 閏年か。                                          |    ○    |
-| ValidDate(), validdate()                   | 存在する日時か。                                  |    ✗    | 
+| name                                       | type         | varargs | description                                       |
+|:------------------------------------------ |:------------ |:-------:|:------------------------------------------------- |
+| ArrayLike(), arraylike()                   | any          |    ○    |                                                   |
+| True(), true()                             | any          |    ○    |                                                   |
+| False(), false()                           | any          |    ○    |                                                   |
+| Truthy(), truthy()                         | any          |    ○    |                                                   |
+| Falsy(), falsy()                           | any          |    ○    |                                                   |
+| Empty(), empty()                           | any          |    ○    | 要素が空か。                                      |
+| Instance(), instance()                     | any          |    ✗    | 引数1が引数2のConstructor/Classのインスタンスか。 |
+| ObjectLiteral(), objectliteral()           | any          |    ○    | 未継承の素のオブジェクトか。                      |
+| ComparisonOperator(), comparisonoperator() | any          |    ○    | 有効な比較演算子の文字列か。                      |
+| SemVer(), semver()                         | any          |    ○    | 有効なSemVer文字列か。                            |
+| Version(), Ver(), versiom(), ver()         | any          |    ○    | 有効な数字, dotのバージョン文字列か。             |
+| LeapYear(), leapyear()                     | number, date |    ○    | 閏年か。                                          |
+| ValidDate(year, mon, day), validdate()     | number       |    ✗    | 存在する日付か。                                  |
