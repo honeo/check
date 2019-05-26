@@ -23,6 +23,14 @@ is.arr([], {}); // false
 not.arr([], {}); // false
 any.arr([], {}); // true
 ```
+```js
+// webpack v4~ webpack.config.js
+{
+	node: {
+		fs: 'empty'
+	}
+}
+```
 
 
 ## API
