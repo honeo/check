@@ -104,7 +104,7 @@ is.stats( fs.statSync('./') ); // true
 
 
 
-### 数値
+### Number
 
 ```js
 is.odd(2); // true
@@ -120,8 +120,17 @@ is.multiple(8080, 80); // true
 | Even, even         | any  |    ○    |                        |
 | Multiple, multiple | any  |    ✗    | 引数1が引数2の倍数か。 |
 
+### String
+```js
+is.lowercase('hoge'); // true
 
+is.uppercase('FOO', 'BAR'); // true
+```
 
+| name                 | type | varargs | description |
+|:-------------------- |:---- |:-------:|:----------- |
+| Lowercase, lowercase | any  |    ○    |             |
+| Uppercase, uppercase | any  |    ○    |             |
 
 ### DOM
 

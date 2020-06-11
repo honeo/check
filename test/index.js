@@ -224,6 +224,22 @@ cases.multiple = (arg)=>{
 }
 
 
+/*
+	String系
+ */
+cases.lowercase = (arg)=>{
+	return is.Lowercase('hoge')
+		&& is.lowercase('foo', 'bar')
+		&& !is.lowercase('Fuga')
+		&& !is.lowercase(true);
+}
+cases.uppercase = (arg)=>{
+	return is.Uppercase('HOGE')
+		&& is.uppercase('FOO', 'BAR')
+		&& !is.uppercase('Fuga')
+		&& !is.uppercase(true);
+}
+
 
 /// DOM
 const textnode = document.createTextNode('');

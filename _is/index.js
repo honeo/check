@@ -25,10 +25,14 @@ const _is = {
 	isObject: require('./is-object.js'),
 	isPromise: require('./is-promise.js'),
 
-	// 数値の内容判定
+	// Number系
 	isOdd: require('./is-odd.js'),
 	isEven: require('./is-even.js'),
 	isMultiple: require('./is-multiple.js'),
+
+	// String系
+	isLowercase: require('./is-lowercase.js'),
+	isUppercase: require('./is-uppercase.js'),
 
 	// DOM
 	isNode: require('./is-node.js'),
