@@ -197,22 +197,22 @@ cases.promise = (arg)=>{
 	Number
 */
 
-// odd
-cases.odd = (arg)=>{
-	return is.Odd(0)
-		&& is.odd(2)
-		&& is.odd(4, 6)
-		&& !is.odd(8, 9)
-		&& !is.odd('oddnumber!');
-}
-
 // even
 cases.even = (arg)=>{
-	return is.Even(1)
-		&& is.even(3)
-		&& is.even(5, 7)
-		&& !is.even(9, 10)
+	return is.Even(0)
+		&& is.even(2)
+		&& is.even(4, 6)
+		&& !is.even(8, 9)
 		&& !is.even('evennumber!');
+}
+
+// odd
+cases.odd = (arg)=>{
+	return is.Odd(1)
+		&& is.odd(3)
+		&& is.odd(5, 7)
+		&& !is.odd(9, 10)
+		&& !is.odd('oddnumber!');
 }
 
 // multiple

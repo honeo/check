@@ -107,17 +107,17 @@ is.stats( fs.statSync('./') ); // true
 ### Number
 
 ```js
-is.odd(2); // true
+is.even(2); // true
 
-is.even(3); // true
+is.odd(3); // true
 
 is.multiple(8080, 80); // true
 ```
 
 | name               | type | varargs | description            |
 |:------------------ |:---- |:-------:|:---------------------- |
-| Odd, odd           | any  |    ○    |                        |
-| Even, even         | any  |    ○    |                        |
+| Odd, odd           | any  |    ○    | 引数がすべて奇数か。     |
+| Even, even         | any  |    ○    | 引数がすべて偶数か。    |
 | Multiple, multiple | any  |    ✗    | 引数1が引数2の倍数か。 |
 
 ### String
