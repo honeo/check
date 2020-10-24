@@ -165,6 +165,7 @@ cases.object = (arg)=>{
 	return !is.Object()
 		&& is.object({})
 		&& is.Obj({})
+		&& is.obj( Object.create(null) )
 		&& is.obj({}, {})
 		&& !is.obj('object!')
 		&& !is.obj({}, true);
