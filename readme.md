@@ -4,8 +4,7 @@
 
 
 ## なにこれ
-型・インスタンス等をチェックするやつ。  
-Polyfill前提。
+型・インスタンス等をチェックするやつ。
 
 
 ## 使い方
@@ -13,15 +12,21 @@ Polyfill前提。
 $ npm i @honeo/check
 ```
 ```js
-const {is, not, any} = require('@honeo/check');
-// or
-const is = require('@honeo/check/is');
+import {is, not, any} from '@honeo/check';
 
 is.arr([]); // true
 
 is.arr([], {}); // false
 not.arr([], {}); // false
 any.arr([], {}); // true
+
+
+// single
+import is from '@honeo/check/is.mjs'; // or not.mjs, any.mjs
+
+// default export
+import check from '@honeo/check';
+check.is.foobar();
 ```
 ```js
 // webpack v4~ webpack.config.js
@@ -169,7 +174,10 @@ is.truthy(true, "hoge", 1, [], {}); // true
 
 is.falsy(null, undefined, "", 0, NaN); // true
 
-is.instance(new Date(), Date); //true
+is.instance([], {}); // true
+is.instance("hoge"); // false
+
+is.instanceof(new Date(), Date); //true
 
 is.objectliteral({}); // true
 not.objectliteral([], new function(){}); // true
@@ -201,10 +209,36 @@ is.validdate(2020, 12, 32); // false
 | Truthy(), truthy()                         | any          |    ○    |                                                   |
 | Falsy(), falsy()                           | any          |    ○    |                                                   |
 | Empty(), empty()                           | any          |    ○    | 要素が空か。                                      |
-| Instance(), instance()                     | any          |    ✗    | 引数1が引数2のConstructor/Classのインスタンスか。 |
+| Instance(), instance()                     | any          |    ○    | 何らかのインスタンスであるオブジェクトか。                                                  |
+| Instanceof(), instanceof()                 | any          |    ✗    | 引数1が引数2のConstructor/Classのインスタンスか。 |
 | ObjectLiteral(), objectliteral()           | any          |    ○    | 未継承の素のオブジェクトか。                      |
 | ComparisonOperator(), comparisonoperator() | any          |    ○    | 有効な比較演算子の文字列か。                      |
 | SemVer(), semver()                         | any          |    ○    | 有効なSemVer文字列か。                            |
 | Version(), Ver(), versiom(), ver()         | any          |    ○    | 有効な数字, dotのバージョン文字列か。             |
 | LeapYear(), leapyear()                     | number, date |    ○    | 閏年か。                                          |
 | ValidDate(year, mon, day), validdate()     | number       |    ✗    | 存在する日付か。                                  |
+
+
+## Breaking Changes
+
+### v2.0.0
+
+#### CommonJS => ES Modules
+```js
+// before CJS
+const {is, not, any} = require('@honeo/check');
+
+
+// after ESM
+import {is, not, any} from '@honeo/check';
+```
+
+
+#### rename: instance() => instanceof()
+```js
+// before
+is.instance([], Array);
+
+// after
+is.instanceof([], Array);
+```

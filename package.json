@@ -2,9 +2,9 @@
   "name": "@honeo/check",
   "version": "1.9.2",
   "description": "型・インスタンスなどの確認",
-  "main": "index.js",
+  "main": "index.mjs",
   "scripts": {
-    "test": "node ./test"
+    "test": "node ./test/index.mjs"
   },
   "author": "honeo",
   "license": "MIT",
