@@ -209,8 +209,9 @@ is.validdate(2020, 12, 32); // false
 | Truthy(), truthy()                         | any          |    ○    |                                                   |
 | Falsy(), falsy()                           | any          |    ○    |                                                   |
 | Empty(), empty()                           | any          |    ○    | 要素が空か。                                      |
-| Instance(), instance()                     | any          |    ○    | 何らかのインスタンスであるオブジェクトか。                                                  |
+| Instance(), instance()                     | any          |    ○    | 何らかのインスタンスであるオブジェクトか。        |
 | Instanceof(), instanceof()                 | any          |    ✗    | 引数1が引数2のConstructor/Classのインスタンスか。 |
+| Nullish(), nullish()                       | any          |    ○    | null or undefined                                 |
 | ObjectLiteral(), objectliteral()           | any          |    ○    | 未継承の素のオブジェクトか。                      |
 | ComparisonOperator(), comparisonoperator() | any          |    ○    | 有効な比較演算子の文字列か。                      |
 | SemVer(), semver()                         | any          |    ○    | 有効なSemVer文字列か。                            |
