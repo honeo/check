@@ -7,6 +7,7 @@
 import isArray from './is-array.mjs';
 import isBoolean from './is-boolean.mjs';
 import isBuffer from './is-buffer.mjs';
+import isArrayBuffer from './is-array-buffer.mjs';
 import isError from './is-error.mjs';
 import isFunction from './is-function.mjs';
 import isNumber from './is-number.mjs';
@@ -59,6 +60,7 @@ const _is = {
 	isArray,
 	isBoolean,
 	isBuffer,
+	isArrayBuffer,
 	isError,
 	isFunction,
 	isNumber,

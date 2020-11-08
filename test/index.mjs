@@ -30,26 +30,33 @@ if( is!==check.is ){
 	throw new Error('Hybrid export failed');
 }
 
+
+console.log('.arraybuffer');
+if( !is.arraybuffer(new ArrayBuffer(0)) ){
+	throw new Error('failed');
+}
+if( !not.arrbuf('hoge') ){
+	throw new Error('failed');
+}
+
 console.log('.nullish');
-{
-	if( !is.nullish(null) ){
-		throw new Error('failed');
-	}
-	if( !is.nullish(undefined) ){
-		throw new Error('failed');
-	}
-	if( !is.nullish(null, undefined) ){
-		throw new Error('failed');
-	}
-	if( !not.nullish(true, "", []) ){
-		throw new Error('failed');
-	}
-	if( not.nullish(null) ){
-		throw new Error('failed');
-	}
-	if( !any.nullish(null, true) ){
-		throw new Error('failed');
-	}
+if( !is.nullish(null) ){
+	throw new Error('failed');
+}
+if( !is.nullish(undefined) ){
+	throw new Error('failed');
+}
+if( !is.nullish(null, undefined) ){
+	throw new Error('failed');
+}
+if( !not.nullish(true, "", []) ){
+	throw new Error('failed');
+}
+if( not.nullish(null) ){
+	throw new Error('failed');
+}
+if( !any.nullish(null, true) ){
+	throw new Error('failed');
 }
 
 

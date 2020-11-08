@@ -17,6 +17,7 @@ const config = {
 		isArray: 'isArr',
 		isBoolean: 'isBool',
 		isBuffer: 'isBuf',
+		isArrayBuffer: 'isArrBuf',
 		isError: 'isErr',
 		isFunction: ['isFunc', 'isFn'],
 		isNumber: 'isNum',
