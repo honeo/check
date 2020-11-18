@@ -1,6 +1,6 @@
 {
   "name": "@honeo/check",
-  "version": "2.2.0",
+  "version": "2.3.0",
   "description": "型・インスタンスなどの確認",
   "main": "index.mjs",
   "scripts": {
