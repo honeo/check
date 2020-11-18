@@ -44,6 +44,7 @@ if(
 	!is.hostname('example.com') &&
 	!is.hostname('www.example.com') &&
 	!is.hostname('foo-bar-2000.example.com') &&
+	!is.hostname('hoge-1234.fu.ga.pi.yo') &&
 	not.hostname('-invalid-hostname.example.com') &&
 	not.hostname('very-long-hostnaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaame.example.com')
 ){
