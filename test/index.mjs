@@ -39,6 +39,30 @@ if( !not.arrbuf('hoge') ){
 	throw new Error('failed');
 }
 
+console.log('.hostname');
+if(
+	!is.hostname('example.com') &&
+	!is.hostname('www.example.com') &&
+	!is.hostname('foo-bar-2000.example.com') &&
+	not.hostname('-invalid-hostname.example.com') &&
+	not.hostname('very-long-hostnaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaame.example.com')
+){
+	throw new Error('failed');
+}
+
+console.log('.ipv4');
+if(
+	!is.ipv4('192.168.1.1') &&
+	!is.ipv4('0.0.0.0') &&
+	!is.ipv4('255.255.255.255') &&
+	!not.ipv4('32.64.128.256') &&
+	!not.ipv4('123.123.123') &&
+	!not.ipv4('123.123.123.123.123')
+){
+	throw new Error('failed');
+}
+
+
 console.log('.nullish');
 if( !is.nullish(null) ){
 	throw new Error('failed');

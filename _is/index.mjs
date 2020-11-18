@@ -31,6 +31,8 @@ import isMultiple from './is-multiple.mjs';
 // String系
 import isLowercase from './is-lowercase.mjs';
 import isUppercase from './is-uppercase.mjs';
+import isIPv4 from './is-ipv4.mjs';
+import isHostname from './is-hostname.mjs';
 
 // DOM
 import isNode from './is-node.mjs';
@@ -80,6 +82,8 @@ const _is = {
 	isMultiple,
 	isLowercase,
 	isUppercase,
+	isIPv4,
+	isHostname,
 	isNode,
 	isTextNode,
 	isElement,

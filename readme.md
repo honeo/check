@@ -121,23 +121,29 @@ is.odd(3); // true
 is.multiple(8080, 80); // true
 ```
 
-| name               | type | varargs | description            |
-|:------------------ |:---- |:-------:|:---------------------- |
-| Odd, odd           | any  |    ○    | 引数がすべて奇数か。     |
-| Even, even         | any  |    ○    | 引数がすべて偶数か。    |
-| Multiple, multiple | any  |    ✗    | 引数1が引数2の倍数か。 |
+| name               | type   | varargs | description            |
+|:------------------ |:------ |:-------:|:---------------------- |
+| Odd, odd           | number |    ○    | 引数がすべて奇数か。   |
+| Even, even         | number |    ○    | 引数がすべて偶数か。   |
+| Multiple, multiple | number |    ✗    | 引数1が引数2の倍数か。 |
 
 ### String
 ```js
+is.ipv4('192.168.1.1'); // true
+
+is.hostname('www.example.com'); // true
+
 is.lowercase('hoge'); // true
 
 is.uppercase('FOO', 'BAR'); // true
 ```
 
-| name                 | type | varargs | description |
-|:-------------------- |:---- |:-------:|:----------- |
-| Lowercase, lowercase | any  |    ○    |             |
-| Uppercase, uppercase | any  |    ○    |             |
+| name                 | type   | varargs | description    |
+|:-------------------- |:------ |:-------:|:-------------- |
+| IPv4, ipv4           | string |    ○    |                |
+| Hostname, hostname   | string |    ○    | やっつけ実装。 |
+| Lowercase, lowercase | string |    ○    |                |
+| Uppercase, uppercase | string |    ○    |                |
 
 ### DOM
 
