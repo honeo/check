@@ -86,12 +86,28 @@ if( !any.nullish(null, true) ){
 }
 
 console.log('.sameday');
-if( !is.sameday(new Date(), new Date()) ){
-	throw new Error('failed');
+{
+	if( !is.sameday(new Date(), new Date()) ){
+		throw new Error('failed1');
+	}
+	const bool2 = is.sameday(
+		new Date(),
+		new Date('1999')
+	);
+	if( bool2 ){
+		throw new Error('failed2');
+	}
+
+	const bool3 = is.sameday(
+		new Date(),
+		new Date(),
+		new Date()
+	);
+	if( !bool3 ){
+		throw new Error('failed3');
+	}
 }
-if( is.sameday(new Date(), new Date('1999')) ){
-	throw new Error('failed');
-}
+
 
 /// type
 

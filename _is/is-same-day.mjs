@@ -1,22 +1,32 @@
+import isDate from './is-date.mjs';
+
 /*
 	引数のdateインスタンスが同じ日か
 
 		args
-			1: date
-			2: date
+			1...: date
 		result
 			boolean
 */
-function isSameDay(date1, date2){
-	const year_1 = date1.getFullYear();
-	const year_2 = date2.getFullYear();
-	const mon_1 = date1.getMonth();
-	const mon_2 = date2.getMonth();
-	const day_1 = date1.getDate();
-	const day_2 = date2.getDate();
-	const str_date1 = `${year_1}.${mon_1}.${day_1}`;
-	const str_date2 = `${year_2}.${mon_2}.${day_2}`;
-	return str_date1===str_date2;
+function isSameday(...arr_date){
+	let str_baseDateText;
+
+	for(let date of arr_date ){
+		if( !isDate(date) ){
+			throw new TypeError(`Invalid arguments: ${index}`);
+		}
+
+		if( !str_baseDateText ){
+			str_baseDateText = date.toDateString();
+		}else{
+			const str_dateText = date.toDateString();
+			if(str_baseDateText!==str_dateText){
+				return false;
+			}
+		}
+	}
+
+	return true;
 }
 
-export default isSameDay;
+export default isSameday;

@@ -5,7 +5,7 @@ const config = {
 
 	// 可変長引数に関する設定
 	variadic: {
-		ignore: [// 無視する関数名
+		ignore: [// 無視する関数名(非対応・元から対応などで)
 			'isInstanceof',
 			'isMultiple',
 			'isValidDate',
