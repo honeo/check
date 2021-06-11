@@ -194,6 +194,8 @@ is.arraylike([], 'hoge'); // true
 
 is.comparisonoperator('<='); // true
 
+is.sameDay(new Date(), new Date()); // true
+
 is.semver('1.2.3'); // true
 is.semver('1.0.0-foo.bar'); // true
 
@@ -222,6 +224,7 @@ is.validdate(2020, 12, 32); // false
 | Nullish(), nullish()                       | any          |    ○    | null or undefined                                 |
 | ObjectLiteral(), objectliteral()           | any          |    ○    | 未継承の素のオブジェクトか。                      |
 | ComparisonOperator(), comparisonoperator() | any          |    ○    | 有効な比較演算子の文字列か。                      |
+| SameDay(), sameday()                       | date         |    ✗    | 同じ日か                                          |
 | SemVer(), semver()                         | any          |    ○    | 有効なSemVer文字列か。                            |
 | Version(), Ver(), versiom(), ver()         | any          |    ○    | 有効な数字, dotのバージョン文字列か。             |
 | LeapYear(), leapyear()                     | number, date |    ○    | 閏年か。                                          |

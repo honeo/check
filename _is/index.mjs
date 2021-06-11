@@ -51,6 +51,7 @@ import isNullish from './is-nullish.mjs';
 import isObjectLiteral from './is-object-literal.mjs';
 import isArrayLike from './is-array-like.mjs';
 import isComparisonOperator from './is-comparison-operator.mjs';
+import isSameDay from './is-same-day.mjs';
 import isSemVer from './is-sem-ver.mjs';
 import isVersion from './is-version.mjs';
 import isEmpty from './is-empty.mjs';
@@ -98,6 +99,7 @@ const _is = {
 	isObjectLiteral,
 	isArrayLike,
 	isComparisonOperator,
+	isSameDay,
 	isSemVer,
 	isVersion,
 	isEmpty,

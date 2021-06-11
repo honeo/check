@@ -8,7 +8,8 @@ const config = {
 		ignore: [// 無視する関数名
 			'isInstanceof',
 			'isMultiple',
-			'isValidDate'
+			'isValidDate',
+			'isSameDay'
 		]
 	},
 

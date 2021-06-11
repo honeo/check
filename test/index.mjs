@@ -85,7 +85,13 @@ if( !any.nullish(null, true) ){
 	throw new Error('failed');
 }
 
-
+console.log('.sameday');
+if( !is.sameday(new Date(), new Date()) ){
+	throw new Error('failed');
+}
+if( is.sameday(new Date(), new Date('1999')) ){
+	throw new Error('failed');
+}
 
 /// type
 
