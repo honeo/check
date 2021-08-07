@@ -39,6 +39,32 @@ if( !not.arrbuf('hoge') ){
 	throw new Error('failed');
 }
 
+
+console.log('.abortsignal');
+{
+	const as = new AbortController().signal;
+	if( is.abortsignal ){
+	}else{
+		throw new Error('native: failed');
+	}
+}
+{
+	const {AbortController} = await import('@azure/abort-controller');
+	const as = new AbortController().signal;
+	if( is.abortsignal ){
+	}else{
+		throw new Error('@azure/abort-controller: failed');
+	}
+}
+{
+	const {AbortController} = await import('node-abort-controller');
+	const as = new AbortController().signal;
+	if( is.abortsignal ){
+	}else{
+		throw new Error('node-abort-controller: failed');
+	}
+}
+
 console.log('.hostname');
 if(
 	!is.hostname('example.com') &&

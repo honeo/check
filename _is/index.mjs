@@ -22,6 +22,7 @@ import isEvent from './is-event.mjs';
 import isEventTarget from './is-event-target.mjs';
 import isObject from './is-object.mjs';
 import isPromise from './is-promise.mjs';
+import isAbortSignal from './is-abort-signal.mjs';
 
 // Number系
 import isOdd from './is-odd.mjs';
@@ -39,6 +40,7 @@ import isNode from './is-node.mjs';
 import isTextNode from './is-text-node.mjs';
 import isElement from './is-element.mjs';
 import isDocumentFragment from './is-document-fragment.mjs';
+
 
 // 雑多
 import isTrue from './is-true.mjs';
@@ -78,6 +80,7 @@ const _is = {
 	isEventTarget,
 	isObject,
 	isPromise,
+	isAbortSignal,
 	isOdd,
 	isEven,
 	isMultiple,
