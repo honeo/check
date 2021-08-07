@@ -88,6 +88,8 @@ is.obj(null); // false
 is.promise(new Promise(_=>_)); // true
 
 is.stats( fs.statSync('./') ); // true
+
+is.abortsignal(new AbortController().signal); // true
 ```
 
 | name                                     | type | varargs | description                                                                                              |
