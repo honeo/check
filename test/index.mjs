@@ -40,10 +40,35 @@ if( !not.arrbuf('hoge') ){
 }
 
 
+console.log('.abortcontroller');
+{
+	const ac = new AbortController();
+	if( is.abortcontroller(ac) ){
+	}else{
+		throw new Error('native: failed');
+	}
+}
+{
+	const {AbortController} = await import('@azure/abort-controller');
+	const ac = new AbortController();
+	if( is.abortcontroller(ac) ){
+	}else{
+		throw new Error('@azure/abort-controller: failed');
+	}
+}
+{
+	const {AbortController} = await import('node-abort-controller');
+	const ac = new AbortController();
+	if( is.abortcontroller(ac) ){
+	}else{
+		throw new Error('node-abort-controller: failed');
+	}
+}
+
 console.log('.abortsignal');
 {
 	const as = new AbortController().signal;
-	if( is.abortsignal ){
+	if( is.abortsignal(as) ){
 	}else{
 		throw new Error('native: failed');
 	}
@@ -51,7 +76,7 @@ console.log('.abortsignal');
 {
 	const {AbortController} = await import('@azure/abort-controller');
 	const as = new AbortController().signal;
-	if( is.abortsignal ){
+	if( is.abortsignal(as) ){
 	}else{
 		throw new Error('@azure/abort-controller: failed');
 	}
@@ -59,7 +84,7 @@ console.log('.abortsignal');
 {
 	const {AbortController} = await import('node-abort-controller');
 	const as = new AbortController().signal;
-	if( is.abortsignal ){
+	if( is.abortsignal(as) ){
 	}else{
 		throw new Error('node-abort-controller: failed');
 	}

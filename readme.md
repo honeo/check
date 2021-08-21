@@ -89,28 +89,30 @@ is.promise(new Promise(_=>_)); // true
 
 is.stats( fs.statSync('./') ); // true
 
+is.abortcontroller(new AbortController() ); // true
 is.abortsignal(new AbortController().signal); // true
 ```
 
-| name                                     | type | varargs | description                                                                                              |
-|:---------------------------------------- |:---- |:-------:|:-------------------------------------------------------------------------------------------------------- |
-| Array, Arr, array, arr                   | any  |    ○    |                                                                                                          |
-| Boolean, Bool, boolean, bool             | any  |    ○    |                                                                                                          |
-| Buffer, Buf, buffer, buf                 | any  |    ○    |                                                                                                          |
-| Error, Err, error, err                   | any  |    ○    |                                                                                                          |
-| Function, Func, Fn, function, func, fn   | any  |    ○    |                                                                                                          |
-| Number, Num, number, num                 | any  |    ○    |                                                                                                          |
-| RegExp, RE, regexp, re                   | any  |    ○    |                                                                                                          |
-| String, Str, string, str                 | any  |    ○    |                                                                                                          |
-| Undefined, Undef, undefined, undef       | any  |    ○    |                                                                                                          |
-| Null, null                               | any  |    ○    |                                                                                                          |
-| NaN, nan                                 | any  |    ○    |                                                                                                          |
-| Date, date                               | any  |    ○    |                                                                                                          |
-| Object, Obj, object, obj                 | any  |    ○    |                                                                                                          |
-| Promise, promise                         | any  |    ○    |                                                                                                          |
-| Stats, stats                             | any  |    ○    |                                                                                                          |
-| ArrayBuffer, ArrBuf, arraybuffer, arrbuf | any  |    ○    |                                                                                                          |
-| AbortSignal, abortsignal                 | any  |    ○    | [AbortSignal](https://developer.mozilla.org/ja/docs/Web/API/AbortSignal)インスタンスか（Polyfill対応）。 |
+| name                                     | type | varargs | description                                                                                                         |
+|:---------------------------------------- |:---- |:-------:|:------------------------------------------------------------------------------------------------------------------- |
+| Array, Arr, array, arr                   | any  |    ○    |                                                                                                                     |
+| Boolean, Bool, boolean, bool             | any  |    ○    |                                                                                                                     |
+| Buffer, Buf, buffer, buf                 | any  |    ○    |                                                                                                                     |
+| Error, Err, error, err                   | any  |    ○    |                                                                                                                     |
+| Function, Func, Fn, function, func, fn   | any  |    ○    |                                                                                                                     |
+| Number, Num, number, num                 | any  |    ○    |                                                                                                                     |
+| RegExp, RE, regexp, re                   | any  |    ○    |                                                                                                                     |
+| String, Str, string, str                 | any  |    ○    |                                                                                                                     |
+| Undefined, Undef, undefined, undef       | any  |    ○    |                                                                                                                     |
+| Null, null                               | any  |    ○    |                                                                                                                     |
+| NaN, nan                                 | any  |    ○    |                                                                                                                     |
+| Date, date                               | any  |    ○    |                                                                                                                     |
+| Object, Obj, object, obj                 | any  |    ○    |                                                                                                                     |
+| Promise, promise                         | any  |    ○    |                                                                                                                     |
+| Stats, stats                             | any  |    ○    |                                                                                                                     |
+| ArrayBuffer, ArrBuf, arraybuffer, arrbuf | any  |    ○    |                                                                                                                     |
+| AbortController, abortcontroller         | any  |    ○    | [AbortController](https://developer.mozilla.org/en-US/docs/Web/API/AbortController)インスタンスか（Polyfill対応）。 |
+| AbortSignal, abortsignal                 | any  |    ○    | [AbortSignal](https://developer.mozilla.org/ja/docs/Web/API/AbortSignal)インスタンスか（Polyfill対応）。            |
 
 
 

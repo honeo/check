@@ -22,6 +22,7 @@ import isEvent from './is-event.mjs';
 import isEventTarget from './is-event-target.mjs';
 import isObject from './is-object.mjs';
 import isPromise from './is-promise.mjs';
+import isAbortController from './is-abort-controller.mjs';
 import isAbortSignal from './is-abort-signal.mjs';
 
 // Number系
@@ -80,6 +81,7 @@ const _is = {
 	isEventTarget,
 	isObject,
 	isPromise,
+	isAbortController,
 	isAbortSignal,
 	isOdd,
 	isEven,
