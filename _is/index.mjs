@@ -10,6 +10,9 @@ import isBuffer from './is-buffer.mjs';
 import isArrayBuffer from './is-array-buffer.mjs';
 import isError from './is-error.mjs';
 import isFunction from './is-function.mjs';
+import isAsyncFunction from './is-async-function.mjs';
+import isAsyncGeneratorFunction from './is-async-generator-function.mjs';
+import isGeneratorFunction from './is-generator-function.mjs';
 import isNumber from './is-number.mjs';
 import isRegExp from './is-reg-exp.mjs';
 import isStats from './is-stats.mjs';
@@ -69,6 +72,9 @@ const _is = {
 	isArrayBuffer,
 	isError,
 	isFunction,
+	isAsyncFunction,
+	isAsyncGeneratorFunction,
+	isGeneratorFunction,
 	isNumber,
 	isRegExp,
 	isStats,

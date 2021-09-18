@@ -90,6 +90,97 @@ console.log('.abortsignal');
 	}
 }
 
+
+console.log('.asyncfunction');
+{
+	const asyncFunc = async()=>{}
+	const bool = is.asyncfunction(asyncFunc);
+	if( !bool ){
+		throw new Error('case async: failed');
+	}
+}
+{
+	const bool = is.asyncfunction(_=>{});
+	if( bool ){
+		throw new Error('case sync: failed');
+	}
+}
+{
+	const asyncFunc = async()=>{}
+	const bool = is.asyncfunction(asyncFunc, asyncFunc);
+	if( !bool ){
+		throw new Error('case async2: failed');
+	}
+}
+{
+	const asyncFunc = async()=>{}
+	const bool = is.asyncfunction(asyncFunc, _=>{});
+	if( bool ){
+		throw new Error('case async, sync: failed');
+	}
+}
+
+
+console.log('.asyncgeneratorfunction');
+{
+	const asyncGeneFunc = async function*(){}
+
+	{
+		const bool = is.asyncgeneratorfunction(asyncGeneFunc);
+		if( !bool ){
+			throw new Error('case asyncGene: failed');
+		}
+	}
+	{
+		const bool = is.asyncgeneratorfunction(_=>{});
+		if( bool ){
+			throw new Error('case sync: failed');
+		}
+	}
+	{
+		const bool = is.asyncgeneratorfunction(asyncGeneFunc, asyncGeneFunc);
+		if( !bool ){
+			throw new Error('case asyncGene2: failed');
+		}
+	}
+	{
+		const bool = is.asyncgeneratorfunction(asyncGeneFunc, _=>{});
+		if( bool ){
+			throw new Error('case asyncGene, sync: failed');
+		}
+	}
+}
+
+
+console.log('.generatorfunction');
+{
+	const geneFunc = function*(){}
+	const bool = is.generatorfunction(geneFunc);
+	if( !bool ){
+		throw new Error('case gene: failed');
+	}
+}
+{
+	const bool = is.generatorfunction(_=>{});
+	if( bool ){
+		throw new Error('case func: failed');
+	}
+}
+{
+	const geneFunc = function*(){}
+	const bool = is.generatorfunction(geneFunc, geneFunc);
+	if( !bool ){
+		throw new Error('case gene2: failed');
+	}
+}
+{
+	const geneFunc = function*(){}
+	const bool = is.generatorfunction(_=>{}, geneFunc);
+	if( bool ){
+		throw new Error('case func, gene: failed');
+	}
+}
+
 console.log('.hostname');
 if(
 	!is.hostname('example.com') &&
