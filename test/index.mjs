@@ -1,4 +1,5 @@
 // Mod: core
+import assert from 'assert';
 import fs from 'fs';
 import path from 'path';
 import url from 'url';
@@ -6,7 +7,7 @@ import url from 'url';
 import JSDOM from 'jsdom';
 // Mod: local
 import check from '../index.mjs';
-import {is,not,any} from '../index.mjs';
+import {is, not, any} from '../index.mjs';
 import _is from '../is.mjs';
 
 
@@ -26,9 +27,8 @@ const __dirname = path.dirname(__filename);
 
 
 // Main
-if( is!==check.is ){
-	throw new Error('Hybrid export failed');
-}
+assert(is===check.is, 'Hybrid export failed')
+
 
 
 console.log('.arraybuffer');
@@ -205,6 +205,26 @@ if(
 ){
 	throw new Error('failed');
 }
+
+// multiple
+console.log('.multiple');
+{
+	assert(is.Multiple(4, 2), 'is 4, 2');
+	assert(is.Multiple(8080, 80), 'is 8080, 80');
+	assert(not.Multiple(151, 50), 'not 151, 50');
+	assert(is.Multiple(0, 5), '0が全ての数の倍数になっていない');
+	assert(is.Multiple(0, 0), '0が0の倍数になっていない');
+
+	let bool;
+	try{
+		is.Multiple('multiple!');
+		bool = false;
+	}catch(e){
+		bool = true;
+	}
+	assert(bool, 'validation failed');
+}
+
 
 
 console.log('.nullish');
@@ -451,13 +471,7 @@ cases.odd = (arg)=>{
 		&& !is.odd('oddnumber!');
 }
 
-// multiple
-cases.multiple = (arg)=>{
-	return is.Multiple(4, 2)
-		&& is.multiple(8080, 80)
-		&& !is.multiple(151, 50)
-		&& !is.multiple('multiple!');
-}
+
 
 
 /*
@@ -669,12 +683,6 @@ const resultArr = [
 	not.str(123),
 	not.str(true, false),
 	not.str('piyo', true),
-
-	// multiple
-	not.Multiple(5, 2),
-	not.multiple(7777, 80),
-	!not.multiple(150, 50),
-	not.multiple('multiple!'),
 
 	// element
 	not.Element(true),
