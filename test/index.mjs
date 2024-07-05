@@ -181,6 +181,40 @@ console.log('.generatorfunction');
 	}
 }
 
+
+
+
+console.log('isInstanceOfClassName');
+{
+	let bool;
+	try{
+		is.instanceofclassname();
+		bool = false;
+	}catch(e){
+		bool = true;
+	}
+	assert(bool, 'case none arg: failed');
+}
+{
+	const bool = is.instanceofclassname(new Date(), 'Date');
+	assert(bool, 'case success: failed');
+}
+{
+	const bool = is.instanceofclassname({}, 'Array');
+	assert(!bool, 'case invalid classname: failed');
+}
+{
+	let bool;
+	try{
+		is.instanceofclassname(true, false);
+		bool = false;
+	}catch(e){
+		bool = true;
+	}
+	assert(bool, 'case invalid arg: failed');
+}
+
+
 console.log('.hostname');
 if(
 	!is.hostname('example.com') &&

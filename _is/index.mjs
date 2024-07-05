@@ -53,6 +53,7 @@ import isTruthy from './is-truthy.mjs';
 import isFalsy from './is-falsy.mjs';
 import isInstance from './is-instance.mjs';
 import isInstanceof from './is-instanceof.mjs';
+import isInstanceOfClassName from './is-instance-of-classname.mjs';
 import isNullish from './is-nullish.mjs';
 import isObjectLiteral from './is-object-literal.mjs';
 import isArrayLike from './is-array-like.mjs';
@@ -106,6 +107,7 @@ const _is = {
 	isFalsy,
 	isInstance,
 	isInstanceof,
+	isInstanceOfClassName,
 	isNullish,
 	isObjectLiteral,
 	isArrayLike,
